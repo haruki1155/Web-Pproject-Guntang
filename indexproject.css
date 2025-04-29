@@ -1,0 +1,313 @@
+:root {
+  --default-font-family: Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+  background: rgba(58, 122, 156, 0.25);
+  overflow: hidden;
+}
+.rectangle {
+  position: relative;
+  width: 1440px;
+  height: 187px;
+  margin: 0 0 0 -3px;
+  background: rgba(105, 221, 194, 0.5);
+  z-index: 14;
+  backdrop-filter: blur(10.35px);
+}
+.regroup {
+  position: absolute;
+  width: 320px;
+  height: 187px;
+  top: 0;
+  left: 474px;
+  z-index: 13;
+}
+.my-project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 117px;
+  height: 35px;
+  top: 128px;
+  left: 0;
+  color: #ffffff;
+  font-family: Orbitron, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 12;
+}
+.d-modeling {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 135px;
+  height: 35px;
+  top: 128px;
+  left: 185px;
+  color: #ffffff;
+  font-family: Orbitron, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 13;
+}
+.rendered {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 103px;
+  height: 35px;
+  top: 128px;
+  left: 894px;
+  color: #ffffff;
+  font-family: Orbitron, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 14;
+}
+.my-project-1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 222px;
+  height: 58px;
+  margin: 51px 0 0 608px;
+  color: #3a7a9c;
+  font-family: Orbitron, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 58px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.flex-row-da {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 1172px;
+  height: 206px;
+  margin: 106px 0 0 133px;
+  z-index: 5;
+}
+.image {
+  flex-shrink: 0;
+  position: relative;
+  width: 362px;
+  height: 204px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/CP8Ne9QVtV.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}
+.image-2 {
+  flex-shrink: 0;
+  position: relative;
+  width: 362px;
+  height: 204px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/cCC63KzKNQ.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 4;
+}
+.image-3 {
+  flex-shrink: 0;
+  position: relative;
+  width: 362px;
+  height: 204px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/MVcdOJHvvh.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 5;
+}
+.flex-row-da-4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 1167px;
+  height: 203px;
+  margin: 19px 0 0 136px;
+  z-index: 9;
+}
+.image-5 {
+  flex-shrink: 0;
+  position: relative;
+  width: 359px;
+  height: 203px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/uW0YxJAyxQ.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 7;
+}
+.image-6 {
+  flex-shrink: 0;
+  position: relative;
+  width: 359px;
+  height: 203px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/iEREzzNz3h.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 8;
+}
+.image-7 {
+  flex-shrink: 0;
+  position: relative;
+  width: 359px;
+  height: 203px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/hoH64kRaJJ.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 9;
+}
+.material-symbols-home {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 50px 0 0 737px;
+  z-index: 10;
+  overflow: hidden;
+}
+.vector {
+  position: relative;
+  width: 40px;
+  height: 45px;
+  margin: 29px 0 0 697px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/NEvcdCy0QU.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 11;
+}
+}
+a.my-project, a.d-modeling, a.rendered {
+  text-decoration: none;
+  transition: opacity 1s ease-in-out;
+}
+
+a.my-project:hover,
+a.d-modeling:hover,
+a.rendered:hover {
+  opacity: 0.2;
+}
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 10;
+    transform: scale(1);
+  }
+  
+  .fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.image, .image-2, .image-3, .image-5, .image-6, .image-7 {
+  opacity: 0; /* Start invisible */
+}
+
+}
+.image:hover,
+.image-2:hover,
+.image-3:hover,
+.image-5:hover,
+.image-6:hover,
+.image-7:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 1; /* Make sure it's visible after animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox .close, .lightbox .prev, .lightbox .next {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close { top: 20px; right: 30px; }
+.prev { left: 10px; top: 50%; transform: translateY(-50%); }
+.next { right: 10px; top: 50%; transform: translateY(-50%); }

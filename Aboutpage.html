@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="aboutpage.css" />
+  <style>
+    /* Hide scrollbar for WebKit-based browsers */
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for Firefox */
+    body {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <header>
+      <div class="box">
+        <div class="branding">
+          <span class="textlogo">MOJI</span>
+          <span class="text-6">Morris Jinn</span>
+        </div>
+        <nav class="navbar">
+          <a href="index.html" class="active">Home</a>
+          <a href="Aboutpage.html" class="active">About</a>
+          <a href="MyProject.html" class="active">Gallery</a>
+          <a href="#" class="active">More</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="group-2">
+        <span class="text-7">ABOUT</span>
+
+        <div class="group-3">
+          <div class="img"></div>
+
+          <span class="text-8">
+            👋 Hi, I'm Morris Jinn R. Guntang!<br>
+          </span>
+
+          <div class="text-9">
+            I’m a BSIT 2 - Block 3 student passionate about 3D artistry and digital creativity. This project showcases my skills in 3D modeling, texturing, and rendering, bringing ideas to life through stunning visuals and immersive designs.<br>
+          </div>
+
+          <span class="text-0">🎨 What This Project is About<br></span>
+
+          <div class="text-des">
+            <p>This project highlights my ability to:</p>
+            <ul>
+              <li>✅ Create detailed and realistic 3D models</li>
+              <li>✅ Design visually appealing textures and materials</li>
+              <li>✅ Render high-quality scenes and animations</li>
+              <li>✅ Apply modern design techniques and workflow</li>
+            </ul>
+          </div>
+
+          <span class="text-0">💡 Explore My Work<br></span>
+
+          <div class="text-des1">
+            <p>Take a look at my 3D gallery and see how I transform ideas into visually striking 3D art. Whether it’s game assets, environment design, or product visualization, I strive to push creativity to new heights!</p>
+          </div>
+
+          <img src="Me.png" alt="Me" class="Me" id="draggable">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const dragItem = document.getElementById("draggable");
+    let offsetX, offsetY, isDragging = false;
+
+    dragItem.addEventListener("mousedown", function (e) {
+      isDragging = true;
+      offsetX = e.clientX - dragItem.getBoundingClientRect().left;
+      offsetY = e.clientY - dragItem.getBoundingClientRect().top;
+
+      // Prevent default bottom/right anchoring
+      dragItem.style.bottom = "auto";
+      dragItem.style.right = "auto";
+    });
+
+    document.addEventListener("mousemove", function (e) {
+      if (isDragging) {
+        dragItem.style.left = (e.clientX - offsetX) + "px";
+        dragItem.style.top = (e.clientY - offsetY) + "px";
+      }
+    });
+
+    document.addEventListener("mouseup", function () {
+      isDragging = false;
+    });
+  </script>
+</body>
+</html>

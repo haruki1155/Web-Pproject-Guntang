@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="indexproject.css" />
+    <style>
+      /* --- Additional Enhancements --- */
+      .flex-row-da, .flex-row-da-4 {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .image, .image-2, .image-3, .image-5, .image-6, .image-7 {
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
+
+      .image:hover, .image-2:hover, .image-3:hover,
+      .image-5:hover, .image-6:hover, .image-7:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+      }
+
+      @media (max-width: 1200px) {
+        .flex-row-da, .flex-row-da-4 {
+          justify-content: center;
+        }
+        .image, .image-2, .image-3, .image-5, .image-6, .image-7 {
+          width: 90%;
+          max-width: 400px;
+        }
+        .main-container {
+          width: 100%;
+        }
+        .rectangle {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .my-project-1 {
+          font-size: 30px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .regroup {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+        }
+        .my-project, .d-modeling, .rendered {
+          font-size: 18px;
+          width: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="rectangle">
+        <div class="regroup">
+          <a href="MyProject.html" class="my-project" style="text-decoration: none;">My Project</a>
+          <a href="3D.html" class="d-modeling" style="text-decoration: none;">3d Modeling</a>
+        </div>
+        <a href="Render.html" class="rendered" style="text-decoration: none;">Rendered</a>
+      </div>
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" />
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+
+      <span class="my-project-1">MY PROJECT</span>
+      <div class="flex-row-da">
+        <div class="image"></div>
+        <div class="image-2"></div>
+        <div class="image-3"></div>
+      </div>
+      <div class="flex-row-da-4">
+        <div class="image-5"></div>
+        <div class="image-6"></div>
+        <div class="image-7"></div>
+      </div>
+      <div class="material-symbols-home"></div>
+      <a href="index.html" style="vector">
+        <div class="vector"></div>
+      </a>
+    </div>
+	<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".image, .image-2, .image-3, .image-5, .image-6, .image-7");
+
+    images.forEach((img) => {
+      // Create a temporary image loader to wait for background image
+      const bg = new Image();
+      const style = getComputedStyle(img);
+      const url = style.backgroundImage.slice(5, -2);
+
+      bg.src = url;
+      bg.onload = () => {
+        img.classList.add("fade-in");
+      };
+    });
+  });
+</script>
+<script>
+  const imageElements = document.querySelectorAll('.image, .image-2, .image-3, .image-5, .image-6, .image-7');
+  const imageUrls = Array.from(imageElements).map(el => getComputedStyle(el).backgroundImage.slice(5, -2));
+  let currentIndex = 0;
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+
+  imageElements.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      openLightbox();
+    });
+  });
+
+  function openLightbox() {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = imageUrls[currentIndex];
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % imageUrls.length;
+    lightboxImg.src = imageUrls[currentIndex];
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
+    lightboxImg.src = imageUrls[currentIndex];
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+  nextBtn.addEventListener('click', showNext);
+  prevBtn.addEventListener('click', showPrev);
+  window.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+  </body>
+</html>

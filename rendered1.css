@@ -1,0 +1,239 @@
+:root {
+  --default-font-family: Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+}
+.rendr {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  top: 0;
+  left: 0;
+  background: rgba(105, 187, 221, 0.3);
+  z-index: 2;
+  overflow: hidden;
+}
+.flex-row-ca {
+  position: relative;
+  width: 1440px;
+  height: 187px;
+  margin: 0 0 0 0;
+  z-index: 15;
+}
+.rectangle {
+  position: absolute;
+  width: 1440px;
+  height: 187px;
+  top: 0;
+  left: 0;
+  background: rgba(105, 221, 194, 0.5);
+  z-index: 1;
+  backdrop-filter: blur(10.35px);
+}
+.my-project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 117px;
+  height: 35px;
+  top: 128px;
+  left: 470px;
+  color: #ffffff;
+  font-family: Orbitron, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 13;
+}
+.d-modeling {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 135px;
+  height: 35px;
+  top: 128px;
+  left: 656px;
+  color: #ffffff;
+  font-family: Orbitron, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 14;
+}
+.rendered {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 103px;
+  height: 35px;
+  top: 128px;
+  left: 890px;
+  color: #ffffff;
+  font-family: Orbitron, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 15;
+}
+.rendered-1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 188px;
+  height: 58px;
+  margin: 21px 0 0 625px;
+  color: #3a7a9c;
+  font-family:Orbitron, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 58px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 3;
+}
+.group {
+  position: relative;
+  width: 1170px;
+  height: 675px;
+  margin: 20px 0 0 133px;
+  z-index: 4;
+  overflow: visible auto;
+}
+.tumbler-with-samples {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  width: 360px;
+  height: 203px;
+  margin: 0 0 0 810px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/qitOPNfAYD.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: -Infinity;
+}
+.flex-row-f {
+  position: absolute;
+  width: 1170px;
+  height: 675px;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+.puff {
+  position: absolute;
+  width: 361px;
+  height: 361px;
+  top: 0;
+  left: 0;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/cJY22k3DaT.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 8;
+}
+.glass {
+  position: absolute;
+  width: 361px;
+  height: 361px;
+  top: 0;
+  left: 405px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/LiOocd973c.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 7;
+}
+.pumpukkinnn {
+  position: absolute;
+  width: 361px;
+  height: 203px;
+  top: 222px;
+  left: 809px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/ZeuxTMDZ4G.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 5;
+}
+.untitled {
+  position: absolute;
+  width: 288px;
+  height: 288px;
+  top: 376px;
+  left: 429px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/4h3LCAbBTn.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 10;
+}
+.puff-right-side {
+  position: absolute;
+  width: 288px;
+  height: 288px;
+  top: 387px;
+  left: 47px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/qEAY7ZCYWM.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 9;
+}
+.light-house {
+  position: absolute;
+  width: 361px;
+  height: 203px;
+  top: 450px;
+  left: 809px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/5Mr4UGGxAR.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 11;
+}
+.vector {
+  position: relative;
+  width: 40px;
+  height: 45px;
+  margin: 8px 0 0 700px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-04-18/okSEmCss3B.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 12;
+}
