@@ -104,7 +104,7 @@ button:focus {
 /* Header box styles */
 .box {
   position: relative;
-  width: 1440px;
+  width: 100%;
   height: 159px;
   margin: 1px 0 0 0;
   background: #7B9FB2;
